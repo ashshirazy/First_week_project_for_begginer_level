@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowSpace | Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .dashboard-header {
+      background: linear-gradient(135deg, #4F46E5, #8B5CF6);
+      border-radius: 32px;
+      padding: 40px;
+      margin: 40px 0;
+      color: white;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .stat-card {
+      background: white;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #E5E7EB;
+    }
+    .stat-card h3 {
+      font-size: 0.9rem;
+      color: #6B7280;
+      margin-bottom: 12px;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #4F46E5;
+    }
+    .section-card {
+      background: white;
+      border-radius: 28px;
+      padding: 32px;
+      margin-bottom: 32px;
+      border: 1px solid #E5E7EB;
+    }
+    .section-title-dash {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .project-list {
+      display: grid;
+      gap: 16px;
+    }
+    .project-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      background: #F9FAFB;
+      border-radius: 20px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .project-info h4 {
+      margin-bottom: 4px;
+    }
+    .project-info p {
+      font-size: 0.85rem;
+      color: #6B7280;
+    }
+    .progress-bar {
+      width: 200px;
+      height: 8px;
+      background: #E5E7EB;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #4F46E5;
+      border-radius: 10px;
+    }
+    .logout-btn {
+      background: #EF4444;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .logout-btn:hover {
+      background: #DC2626;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 768px) {
+      .dashboard-header { padding: 24px; }
+      .stat-card { padding: 16px; }
+      .project-item { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <nav class="navbar">
+    <a href="index.html" class="logo">FlowSpace</a>
+    <div class="nav-links">
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <button onclick="logout()" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <div class="container">
+    <div class="dashboard-header" id="welcomeHeader">
+      <h1 id="welcomeMessage">Welcome back! 👋</h1>
+      <p>Your workspace is ready. Here's what's happening today.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3><i class="fas fa-folder"></i> Active Projects</h3>
+        <div class="stat-number">4</div>
+      </div>
+      <div class="stat-card">
+        <h3><i class="fas fa-users"></i> Team Members</h3>
+        <div class="stat-number">8</div>
+      </div>
+      <div class="stat-card">
+        <h3><i class="fas fa-check-circle"></i> Tasks Completed</h3>
+        <div class="stat-number">47</div>
+      </div>
+      <div class="stat-card">
+        <h3><i class="fas fa-clock"></i> Hours Saved</h3>
+        <div class="stat-number">23</div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title-dash">
+        <h2>📋 Active projects</h2>
+        <a href="#" style="color: #4F46E5; font-weight: 600;" onclick="alert('Create new project feature coming soon!')">Create new →</a>
+      </div>
+      <div class="project-list">
+        <div class="project-item">
+          <div class="project-info">
+            <h4>Mobile App Redesign</h4>
+            <p>Due: Dec 15, 2025 • 8 tasks remaining</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 65%"></div>
+          </div>
+          <span style="font-weight: 600; color: #4F46E5;">65%</span>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h4>Marketing Website Launch</h4>
+            <p>Due: Jan 10, 2026 • 12 tasks remaining</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 30%"></div>
+          </div>
+          <span style="font-weight: 600; color: #4F46E5;">30%</span>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h4>API Integration</h4>
+            <p>Due: Nov 30, 2025 • 3 tasks remaining</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 85%"></div>
+          </div>
+          <span style="font-weight: 600; color: #4F46E5;">85%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-title-dash">
+        <h2>🚀 Quick actions</h2>
+      </div>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <button class="btn-primary" onclick="alert('Create project form would open here')">Create project</button>
+        <button class="btn-outline" onclick="alert('Invite team members feature coming soon!')">Invite team</button>
+        <button class="btn-outline" onclick="alert('Analytics dashboard coming soon!')">View analytics</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>© 2025 FlowSpace. All rights reserved.</div>
+      <div class="social-icons">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const currentUser = JSON.parse(localStorage.getItem('flowspace_current_user'));
+  
+  if (!currentUser) {
+    alert('Please login to access your dashboard');
+    window.location.href = 'login.html';
+  }
+  
+  const firstName = currentUser.firstName || (currentUser.email ? currentUser.email.split('@')[0] : 'User');
+  document.getElementById('welcomeMessage').innerHTML = `Welcome back, ${firstName}! 👋`;
+  
+  function logout() {
+    if (confirm('Are you sure you want to logout?')) {
+      localStorage.removeItem('flowspace_current_user');
+      alert('You have been logged out successfully.');
+      window.location.href = 'index.html';
+    }
+  }
+</script>
+</body>
+</html>

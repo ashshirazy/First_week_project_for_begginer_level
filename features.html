@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowSpace | Features</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .features-hero {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+    .features-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #4F46E5, #8B5CF6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 16px;
+    }
+    .all-features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin: 60px 0;
+    }
+    .feature-detailed {
+      background: #F9FAFE;
+      border-radius: 28px;
+      padding: 32px;
+      transition: all 0.3s ease;
+    }
+    .feature-detailed:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -12px rgba(79, 70, 229, 0.15);
+    }
+    .feature-detailed i {
+      font-size: 2.5rem;
+      color: #4F46E5;
+      margin-bottom: 20px;
+    }
+    .feature-detailed h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+    .feature-detailed p {
+      color: #4B5563;
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .features-hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <nav class="navbar">
+    <a href="index.html" class="logo">FlowSpace</a>
+    <div class="nav-links">
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="login.html" class="btn-outline btn-small">Sign In</a>
+      <a href="signup.html" class="btn-primary btn-small">Sign Up</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <div class="container">
+    <div class="features-hero">
+      <h1>Everything you need to scale</h1>
+      <p style="color: #4B5563; max-width: 640px; margin: 0 auto;">Powerful features to help your team collaborate, automate, and grow.</p>
+    </div>
+
+    <div class="all-features-grid">
+      <div class="feature-detailed">
+        <i class="fas fa-bolt"></i>
+        <h3>Lightning Fast</h3>
+        <p>Real-time sync across all devices with sub-second latency. Never miss an update again.</p>
+      </div>
+      <div class="feature-detailed">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Enterprise Security</h3>
+        <p>Bank-level encryption, SSO, and role-based access control for peace of mind.</p>
+      </div>
+      <div class="feature-detailed">
+        <i class="fas fa-chart-line"></i>
+        <h3>Advanced Analytics</h3>
+        <p>Custom dashboards, real-time metrics, and actionable insights.</p>
+      </div>
+      <div class="feature-detailed">
+        <i class="fas fa-robot"></i>
+        <h3>AI Automation</h3>
+        <p>Automate repetitive tasks with our intelligent workflow engine.</p>
+      </div>
+      <div class="feature-detailed">
+        <i class="fas fa-plug"></i>
+        <h3>100+ Integrations</h3>
+        <p>Connect with Slack, GitHub, Jira, Figma, and more.</p>
+      </div>
+      <div class="feature-detailed">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile First</h3>
+        <p>Full-featured mobile apps for iOS and Android.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>© 2025 FlowSpace. All rights reserved.</div>
+      <div class="social-icons">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

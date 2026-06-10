@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowSpace | Create Account</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .auth-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      margin: 40px 0;
+    }
+    .auth-card {
+      background: white;
+      max-width: 520px;
+      width: 100%;
+      padding: 48px 40px;
+      border-radius: 32px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+      border: 1px solid #E5E7EB;
+    }
+    .auth-card h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      text-align: center;
+      color: #0A0B1E;
+    }
+    .auth-card > p {
+      text-align: center;
+      color: #6B7280;
+      margin-bottom: 32px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .input-group {
+      margin-bottom: 20px;
+    }
+    .input-group label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+      color: #1F2937;
+    }
+    .input-group input,
+    .input-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid #E5E7EB;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    .input-group input:focus,
+    .input-group select:focus {
+      outline: none;
+      border-color: #4F46E5;
+    }
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .checkbox-group input {
+      width: 18px;
+      height: 18px;
+    }
+    .auth-btn {
+      width: 100%;
+      margin-top: 8px;
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 24px;
+      color: #6B7280;
+    }
+    .login-link a {
+      color: #4F46E5;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .error-message {
+      background: #FEE2E2;
+      color: #DC2626;
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      display: none;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .auth-card { padding: 32px 24px; margin: 0 16px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <nav class="navbar">
+    <a href="index.html" class="logo">FlowSpace</a>
+    <div class="nav-links">
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="login.html" class="btn-outline btn-small">Sign In</a>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <i class="fas fa-rocket" style="font-size: 2.5rem; color: #4F46E5; display: block; text-align: center; margin-bottom: 16px;"></i>
+      <h2>Create your account</h2>
+      <p>Start your 14-day free trial</p>
+      
+      <div id="errorMessage" class="error-message"></div>
+      
+      <form id="signupForm">
+        <div class="form-row">
+          <div class="input-group">
+            <label>First name *</label>
+            <input type="text" id="firstName" required>
+          </div>
+          <div class="input-group">
+            <label>Last name *</label>
+            <input type="text" id="lastName" required>
+          </div>
+        </div>
+        
+        <div class="input-group">
+          <label>Work email *</label>
+          <input type="email" id="email" required placeholder="hello@flowspace.com">
+        </div>
+        
+        <div class="input-group">
+          <label>Company</label>
+          <input type="text" id="company" placeholder="Your company name">
+        </div>
+        
+        <div class="input-group">
+          <label>Password *</label>
+          <input type="password" id="password" required placeholder="Create a strong password">
+        </div>
+        
+        <div class="input-group">
+          <label>Confirm password *</label>
+          <input type="password" id="confirmPassword" required placeholder="Confirm your password">
+        </div>
+        
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">I agree to the <a href="#" style="color:#4F46E5;">Terms of Service</a> and <a href="#" style="color:#4F46E5;">Privacy Policy</a></label>
+        </div>
+        
+        <button type="submit" class="btn-primary auth-btn">Start free trial <i class="fas fa-arrow-right"></i></button>
+        
+        <div class="login-link">
+          Already have an account? <a href="login.html">Sign in</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>© 2025 FlowSpace. All rights reserved.</div>
+      <div class="social-icons">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email').value;
+    const company = document.getElementById('company').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const terms = document.getElementById('terms').checked;
+    const errorDiv = document.getElementById('errorMessage');
+    
+    if (password !== confirmPassword) {
+      errorDiv.textContent = '❌ Passwords do not match!';
+      errorDiv.style.display = 'block';
+      setTimeout(() => { errorDiv.style.display = 'none'; }, 3000);
+      return;
+    }
+    
+    if (password.length < 6) {
+      errorDiv.textContent = '❌ Password must be at least 6 characters!';
+      errorDiv.style.display = 'block';
+      setTimeout(() => { errorDiv.style.display = 'none'; }, 3000);
+      return;
+    }
+    
+    if (!terms) {
+      errorDiv.textContent = '❌ You must agree to the Terms of Service!';
+      errorDiv.style.display = 'block';
+      setTimeout(() => { errorDiv.style.display = 'none'; }, 3000);
+      return;
+    }
+    
+    const users = JSON.parse(localStorage.getItem('flowspace_users') || '[]');
+    if (users.some(u => u.email === email)) {
+      errorDiv.textContent = '❌ An account with this email already exists!';
+      errorDiv.style.display = 'block';
+      setTimeout(() => { errorDiv.style.display = 'none'; }, 3000);
+      return;
+    }
+    
+    const newUser = {
+      id: Date.now(),
+      firstName,
+      lastName,
+      email,
+      company: company || 'Individual',
+      password,
+      role: 'user',
+      status: 'active',
+      joinDate: new Date().toISOString()
+    };
+    
+    users.push(newUser);
+    localStorage.setItem('flowspace_users', JSON.stringify(users));
+    localStorage.setItem('flowspace_current_user', JSON.stringify(newUser));
+    
+    alert(`🎉 Welcome to FlowSpace, ${firstName}! Your 14-day trial has started.`);
+    window.location.href = "dashboard.html";
+  });
+</script>
+</body>
+</html>

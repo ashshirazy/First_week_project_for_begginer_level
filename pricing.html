@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowSpace | Pricing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .pricing-hero {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+    .pricing-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .pricing-hero h1 span {
+      background: linear-gradient(135deg, #4F46E5, #8B5CF6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    @media (max-width: 768px) {
+      .pricing-hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <nav class="navbar">
+    <a href="index.html" class="logo">FlowSpace</a>
+    <div class="nav-links">
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="login.html" class="btn-outline btn-small">Sign In</a>
+      <a href="signup.html" class="btn-primary btn-small">Sign Up</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <div class="container">
+    <div class="pricing-hero">
+      <h1>Simple, transparent <span>pricing</span></h1>
+      <p style="color: #4B5563;">No hidden fees. Cancel anytime.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Starter</h3>
+        <div class="price">$19<span>/mo</span></div>
+        <p>Up to 10 seats, 100 projects</p>
+        <a href="signup.html" class="btn-outline">Get started</a>
+      </div>
+      <div class="price-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <h3>Professional</h3>
+        <div class="price">$49<span>/mo</span></div>
+        <p>Unlimited projects & priority support</p>
+        <a href="signup.html" class="btn-primary">Start trial</a>
+      </div>
+      <div class="price-card">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <p>Dedicated success & SSO</p>
+        <a href="contact.html" class="btn-outline">Contact sales</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div>© 2025 FlowSpace. All rights reserved.</div>
+      <div class="social-icons">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
